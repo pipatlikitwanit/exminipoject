@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายการพัฒนาตนเอง</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="asset/css/service.css">
+</head>
+<body class="flex flex-col min-h-screen">
+    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <nav class="bg-gray-800 text-white p-3 sticky top-0 z-50 rounded-lg mb-8">
+            <div class="w-full flex justify-between items-center px-4 md:px-12">
+                <a href="index.html" class="text-4xl font-bold">ProCert Solution</a>
+                <ul class="flex space-x-6 text-lg">
+                    <li><a href="index.html" class="hover:text-blue-400 transition-colors">Home</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition-colors">Services</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition-colors">About</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="relative header-container text-center mb-8">
+            <a href="service.html" class="absolute top-0 left-0 mt-4 ml-4 px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors">
+                &larr; กลับหน้าบริการ
+            </a>
+            <h1 id="page-title" class="text-4xl font-extrabold mb-2"></h1>
+            <p id="page-subtitle" class="text-lg"></p>
+        </div>
+        
+        <div class="main-container">
+            <div class="item-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="item-grid">
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-400 text-center py-6 mt-12">
+        <div class="container mx-auto">
+            <p>&copy; 2025 ProCert Solution. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <div id="itemModal" class="modal">
+        <div class="modal-content large-modal">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body-content">
+                <img id="modal-image" src="" alt="ภาพหลักสูตร" class="modal-image-top">
+                <div class="text-content">
+                    <h2 id="modal-title"></h2>
+                    <p id="modal-description"></p>
+                    <div class="modal-info-group">
+                        <p id="modal-duration"></p>
+                        <p id="modal-prerequisites"></p>
+                        <p id="modal-price"></p>
+                    </div>
+                    <div class="button-group">
+                        <a href="#" class="px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors mt-4">ลงทะเบียน / ดูรายละเอียดเพิ่มเติม</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="registerModal" class="modal">
+        <div class="modal-content form-card">
+            <span class="close-btn">&times;</span>
+            <div class="modal-form-header">
+                <a href="#" class="back-link">
+                    &larr; กลับ
+                </a>
+                <h2 id="register-modal-title">กรอกข้อมูลเพื่อสมัครงาน</h2>
+            </div>
+            
+            <div class="modal-form-body">
+                <form id="registration-form" class="flex flex-col gap-4" novalidate>
+                    <div class="form-group">
+                        <label for="course">หลักสูตร/บริการที่สนใจ:</label>
+                        <select id="course" name="course" required>
+                            <option value="">กรุณาเลือก</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="firstname">ชื่อจริง:</label>
+                            <input type="text" id="firstname" name="firstname" required>
+                        </div>
+                        <div>
+                            <label for="lastname">นามสกุล:</label>
+                            <input type="text" id="lastname" name="lastname" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">อีเมล:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">เบอร์โทรศัพท์ (10 หลัก):</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">ที่อยู่:</label>
+                        <textarea id="address" name="address" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-group grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="country">ประเทศ:</label>
+                            <select id="country" name="country">
+                                <option value="">กรุณาเลือกประเทศ</option>
+                                <option value="TH">ไทย</option>
+                                <option value="US">สหรัฐอเมริกา</option>
+                                <option value="JP">ญี่ปุ่น</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="zipcode">รหัสไปรษณีย์:</label>
+                            <input type="text" id="zipcode" name="zipcode">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender">เพศ:</label>
+                        <select id="gender" name="gender">
+                            <option value="">กรุณาเลือกเพศ</option>
+                            <option value="male">ชาย</option>
+                            <option value="female">หญิง</option>
+                            <option value="other">อื่น ๆ</option>
+                        </select>
+                    </div>
+                    <div id="other-gender-input" class="form-group" style="display:none;">
+                        <label for="other_gender_text">โปรดระบุ:</label>
+                        <input type="text" id="other_gender_text" name="other_gender_text">
+                    </div>
+                    
+                    <div class="form-group mt-6">
+                        <button type="submit" class="submit-btn bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">ส่งข้อมูล</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="alertModal" class="modal-in-form">
+            <div class="modal-content small-modal">
+                <h2 class="text-2xl font-bold mb-4">แจ้งเตือน</h2>
+                <p id="alert-message" class="text-gray-700 mb-6"></p>
+                <button id="alert-ok-btn" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">ตกลง</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="asset/scripts/training.js"></script>
+</body>
+</html>

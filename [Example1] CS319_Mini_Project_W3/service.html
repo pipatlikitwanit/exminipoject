@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บริการของเรา - ProCert Solution</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="asset/css/service.css">
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+<body class="flex flex-col min-h-screen">
+    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <nav class="bg-gray-800 text-white p-3 sticky top-0 z-50 rounded-lg mb-8">
+            <div class="w-full flex justify-between items-center px-4 md:px-12">
+                <a href="index.html" class="text-4xl font-bold">ProCert Solution</a>
+                <ul class="flex space-x-6 text-lg">
+                    <li><a href="index.html" class="hover:text-blue-400 transition-colors">Home</a></li>
+                    <li><a href="service.html" class="hover:text-blue-400 transition-colors">Services</a></li>
+                    <li><a href="about.html" class="hover:text-blue-400 transition-colors">About</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="main-container animate-fade-in">
+            <div class="header-container text-center mb-8">
+                <h1 class="text-4xl font-extrabold text-gray-900 mb-2">แหล่งรวม Certsolution ครบวงจร</h1>
+                <p class="text-lg text-gray-600">ยกระดับศักยภาพของคุณด้วยหลักสูตรอบรม การสอบใบรับรอง และสัมมนาที่น่าสนใจ</p>
+            </div>
+            
+            <div class="card-container grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="card bg-white rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer" onclick="window.location.href='category.html?type=training'">
+                    <img src="asset/images/training-service.jpg" alt="ภาพการอบรม" class="rounded-t-lg w-full">
+                    <div class="card-content p-6">
+                        <h2 class="text-xl font-semibold mt-4 mb-2">หลักสูตรการพัฒนาทักษะ</h2>
+                        <p class="text-gray-600">ค้นหาหลักสูตรอบรมที่ช่วยเพิ่มพูนทักษะเฉพาะด้านสำหรับงานของคุณ</p>
+                    </div>
+                </div>
+                <div class="card bg-white rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer" onclick="window.location.href='category.html?type=certify'">
+                    <img src="asset/images/certify-service.jpg" alt="ภาพการสอบรับรอง" class="rounded-t-lg w-full">
+                    <div class="card-content p-6">
+                        <h2 class="text-xl font-semibold mt-4 mb-2">การสอบใบรับรองความรู้</h2>
+                        <p class="text-gray-600">พิสูจน์ความเชี่ยวชาญของคุณด้วยการสอบรับรองมาตรฐานระดับสากล</p>
+                    </div>
+                </div>
+                <div class="card bg-white rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer" onclick="window.location.href='category.html?type=seminar'">
+                    <img src="asset/images/seminar-service.jpg" alt="ภาพการสัมมนา" class="rounded-t-lg w-full">
+                    <div class="card-content p-6">
+                        <h2 class="text-xl font-semibold mt-4 mb-2">การสัมมนาและการแลกเปลี่ยนความรู้</h2>
+                        <p class="text-gray-600">อัปเดตเทรนด์และแลกเปลี่ยนความรู้กับผู้เชี่ยวชาญในวงการ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-400 text-center py-6 mt-12">
+        <div class="container mx-auto">
+            <p>&copy; 2025 ProCert Solution. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
